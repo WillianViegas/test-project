@@ -39,6 +39,4 @@ public class UsuarioService {
 		return idade;
 	}
 	
-	
-	
 }

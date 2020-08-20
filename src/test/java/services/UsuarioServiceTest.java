@@ -39,11 +39,12 @@ public class UsuarioServiceTest {
 	@Test
 	public void deveRetornarDataNascimentoUsuario() {
 		//cenario
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Usuario usuario1 = new Usuario("Usuario1", new Date(), 1.78f);
 		//acao
 		String resultado = uService.retornaDataNascimentoUsuario(usuario1);
 		//verificacao
-		error.checkThat(resultado, CoreMatchers.is("18/08/2020"));
+		error.checkThat(resultado, CoreMatchers.is(sdf.format(new Date())));
 	}
 	
 	@Test
